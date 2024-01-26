@@ -220,21 +220,16 @@ def Analisis_Review(df_Order_Items,df_Order_Reviews,df_sellers) :
     with st.expander("Penjelasan Cabang Terendah") :
         st.write('Analisis selanjutnya untuk menambah wawasan pengguna, terlihat terdapat 2 cabang yang memiliki penilaian 1 terbanyak, diantaranya Sao Paulo sebanyak 3.571 dan ibitinga sebangayk 1.241. dari sini perusahaan dapat mengambil keputusan apakah barang dari cabang tersebut perlu di cek kembali kualitasnya atau menutup pengiriman dari cabang tersebut')
 
-df_Order_Items = load_data("https://raw.githubusercontent.com/tkjfakhrian/DicodingAnalis/main/order_items_dataset.csv")
-df_Order_Reviews = load_data("https://raw.githubusercontent.com/tkjfakhrian/DicodingAnalis/main/order_reviews_dataset.csv")
-df_orders = load_data("https://raw.githubusercontent.com/tkjfakhrian/DicodingAnalis/main/orders_dataset.csv")
-df_sellers = load_data("https://raw.githubusercontent.com/tkjfakhrian/DicodingAnalis/main/sellers_dataset.csv")
+df_Order_Items = load_data("https://raw.githubusercontent.com/tkjfakhrian/LatihanAnalisisData/main/order_items_dataset.csv")
+df_Order_Reviews = load_data("https://raw.githubusercontent.com/tkjfakhrian/LatihanAnalisisData/main/order_reviews_dataset.csv")
+df_orders = load_data("https://raw.githubusercontent.com/tkjfakhrian/LatihanAnalisisData/main/orders_dataset.csv")
+df_sellers = load_data("https://raw.githubusercontent.com/tkjfakhrian/LatihanAnalisisData/main/sellers_dataset.csv")
 
 with st.sidebar :
-    selected = option_menu('Menu',['Data Diri','Dashboard'],
+    selected = option_menu('Menu',['Dashboard'],
     icons =["easel2", "graph-up"],
     menu_icon="cast",
     default_index=0)
-
-if (selected == 'Data Diri') :
-    st.header(f"Data Diri")
-    st.text("Nama  : Fakhrian Fadlia Adiwijaya")
-    st.text("Email : tkj.fakhrian@gmail.com")
     
 if (selected == 'Dashboard') :
     st.header(f"Dashboard Analisis E-Commerce")
